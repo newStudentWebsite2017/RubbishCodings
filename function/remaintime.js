@@ -15,8 +15,14 @@ var dayten,dayone,hourten,hourone,minten,minone,secten,secone;
 
 
 CalculateRemainTime();
-Setnum();
-
+Setnumones(secone,secnum_one,sec);
+Setnumones(minone,minnum_one,min);
+Setnumones(hourone,hournum_one,hour);
+Setnumones(dayone,daynum_one,day);
+Setnumtens(secten,secnum_ten,sec);
+Setnumtens(minten,minnum_ten,min);
+Setnumtens(hourten,hournum_ten,hour);
+Setnumtens(dayten,daynum_ten,day);
 function CalculateRemainTime() {
     var termstart = 1504886400000;
     var now = new Date();
@@ -31,49 +37,90 @@ function CalculateRemainTime() {
 }
 
 
-function Setnum() {
+function Setnumones(ones,num_ones,times) {
+    
+    var swtich = Math.floor(times/10);
+    swtich = times - swtich*10;
+    ones = -(38*10-swtich*38);
+    if(ones == -38) {
+        num_ones.style.transition = "0.3s";
+    }
+    num_ones.style.backgroundPositionY = ones + 'px'; 
 
-    var swtich = Math.floor(sec/10);
-    swtich = sec - swtich*10;
-    secone = -(38*10-swtich*38);
-    secnum_one.style.backgroundPositionY = secone + 'px'; 
+    console.log(ones);
 
-    secten = Math.floor(sec/10);
-    secten = -(38*6-secten*38);
-    secnum_ten.style.backgroundPositionY = secten + 'px';
+    // swtich = Math.floor(min/10);
+    // swtich = min - swtich*10;
+    // minone = -(38*10-swtich*38);
+    // minnum_one.style.backgroundPositionY = minone + 'px';
 
-    swtich = Math.floor(min/10);
-    swtich = min - swtich*10;
-    minone = -(38*10-swtich*38);
-    minnum_one.style.backgroundPositionY = minone + 'px';
+    
 
-    minten = Math.floor(min/10);
-    minten = -(38*6-minten*38);
-    minnum_ten.style.backgroundPositionY = minten + 'px';
+    // swtich = Math.floor(hour/10);
+    // swtich = hour - swtich*10;
+    // hourone = -(38*10-swtich*38);
+    // hournum_one.style.backgroundPositionY = hourone + 'px';
 
-    swtich = Math.floor(hour/10);
-    swtich = hour - swtich*10;
-    hourone = -(38*10-swtich*38);
-    hournum_one.style.backgroundPositionY = hourone + 'px';
+    
+    // swtich = Math.floor(day/10);
+    // swtich = day - swtich*10;
+    // dayone = -(38*10-swtich*38);
+    // daynum_one.style.backgroundPositionY = dayone + 'px';
 
-    hourten = Math.floor(hour/10);
-    hourten = -(38*6-hourten*38);
-    hournum_ten.style.backgroundPositionY = hourten + 'px';
-
-    swtich = Math.floor(day/10);
-    swtich = day - swtich*10;
-    dayone = -(38*10-swtich*38);
-    daynum_one.style.backgroundPositionY = dayone + 'px';
-
-    dayten = Math.floor(day/10);
-    dayten = -(38*6-dayten*38);
-    daynum_ten.style.backgroundPositionY = dayten + 'px'; 
+    
+    
+    if (ones == -380 ) {
+        
+        var change = setTimeout(function () {
+            num_ones.style.backgroundPositionY = 0;
+            num_ones.style.transition = "0s";
+        },300);
+        
+    }
 
 }
+function Setnumtens(tens,num_tens,times) {
+
+    tens = Math.floor(times/10);
+    tens = -(38*6-tens*38);
+    if(tens == -38) {
+        num_tens.style.transition = "0.3s";
+    }
+    num_tens.style.backgroundPositionY = tens + 'px';
+
+    if (tens == -228 ) {
+        
+        var change = setTimeout(function () {
+            num_tens.style.backgroundPositionY = 0;
+            num_tens.style.transition = "0s";
+        },300);
+        
+    }
+
+    // minten = Math.floor(min/10);
+    // minten = -(38*6-minten*38);
+    // minnum_ten.style.backgroundPositionY = minten + 'px';
+
+    // hourten = Math.floor(hour/10);
+    // hourten = -(38*6-hourten*38);
+    // hournum_ten.style.backgroundPositionY = hourten + 'px';
+
+    // dayten = Math.floor(day/10);
+    // dayten = -(38*6-dayten*38);
+    // daynum_ten.style.backgroundPositionY = dayten + 'px'; 
+}
+
 
 function Movenum() {
     CalculateRemainTime();
-    Setnum();
+    Setnumones(secone,secnum_one,sec);
+    Setnumones(minone,minnum_one,min);
+    Setnumones(hourone,hournum_one,hour);
+    Setnumones(dayone,daynum_one,day);
+    Setnumtens(secten,secnum_ten,sec);
+    Setnumtens(minten,minnum_ten,min);
+    Setnumtens(hourten,hournum_ten,hour);
+    Setnumtens(dayten,daynum_ten,day);
 }
 
 // function movenum() {
