@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>used for remain time</title>
+    <meta charset="utf-8">
+    <style type="text/css">
+        .contianer{
+            width: 1440px;
+            height: 850px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .remaintime-container{
+            width: 750px;
+            height: 850px;
+            margin: 0 auto;
+            position: relative;
+            background: url(../../images/remaining.png) no-repeat;
+            
+        }
+        .num-container{
+            width: 425px;
+            height: 90px;
+            position: absolute;
+            top: 390px;
+            left: 45px;
+
+
+        }
+        .nums{
+            width: 27px;
+            height: 38px;
+            background: url(../../images/nums.png);
+            transition: .3s;
+            overflow: hidden;
+            position: absolute;
+            
+
+        }
+        .tens{
+            background: url(../../images/nums-2.png);
+        }
+        #day-ten{
+            top: 10px;
+            left: 10px;
+        }
+        #day-one{
+            top: 13px;
+            left:37px;
+        }
+        #hour-ten{
+            top: 23px;
+            left: 123px;
+        }
+        #hour-one{
+            top: 26px;
+            left: 150px;
+        }
+        #min-ten{
+            top: 30px;
+            left: 239px;
+
+        }
+        #min-one{
+            top: 33px;
+            left: 266px;
+        }
+        #sec-ten{
+            top: 38px;
+            left: 358px;
+        }
+        #sec-one{
+            top: 41px;
+            left: 385px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="remaintime-container">
+            <div class="num-container">
+                <div class="nums tens" id="day-ten"></div>
+                <div class="nums" id="day-one"></div>
+                <div class="nums tens" id="hour-ten"></div>
+                <div class="nums" id="hour-one"></div>
+                <div class="nums tens" id="min-ten"></div>
+                <div class="nums" id="min-one"></div>
+                <div class="nums tens" id="sec-ten"></div>
+                <div class="nums" id="sec-one"></div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="../../function/remaintime.js"></script>
+</html>
