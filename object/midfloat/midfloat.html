@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This is used for float 2Dcodes</title>
+    <style type="text/css">
+        .container{
+            width: 1000px;
+            height: 5000px;
+            margin: 0 auto;
+            position: relative;
+            background: #000;
+        }
+        .boxes{
+            width: 209px;
+            height: 345px;
+            position: fixed;
+            top: 20%;
+            
+
+        }
+        @keyframes floats{
+            0%{margin-top: 0;}
+            40%{margin-top: 30px;}
+            60%{margin-top: 40px;}
+            100%{margin-top: 0;}
+        }
+        .boxes img{
+            animation: floats 5s steps(100) infinite;
+        }
+
+        
+
+
+    </style>
+</head>
+<body onresize="bemid();">
+<div class="leftbox boxes">
+    <img src="./CQUPTonhand.png">
+</div>
+<div class="rightbox boxes">
+    <img src="./littlehelper.png">
+</div> 
+<div class="container">
+    
+</div>
+
+</body >
+<script type="text/javascript">
+    var mainbody = document.querySelector('body')
+
+     console.log(mainbody);
+    function bemid(){
+        var screenwidth = document.body.clientWidth;
+    // var screenheight = 
+        var leftbox = document.querySelector('.leftbox');
+        var rightbox = document.querySelector('.rightbox');
+        var distance = (screenwidth - 1000 - 209*2)/2;
+        leftbox.style.left = distance + 'px';
+        rightbox.style.right = distance + 'px';
+        console.log(screenwidth);
+    }
+    bemid();
+    
+
+
+</script>
+</html>
