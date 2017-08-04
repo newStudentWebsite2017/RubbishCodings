@@ -46,10 +46,11 @@ nav img{
 	float: left;
 	font-size: 1.25em;
 	text-align: center;
-	height: 58px;
+	
 	width: 100px;
-	padding-top: 20px;
-
+	line-height: 78px;
+    transition: .2s;
+    height: 58px;
 }
 
 #navs a{
@@ -426,8 +427,10 @@ footer{
 	background-color: #d2f4aa;
 	color: #7fb63a;
 	height: 12.75em;
-	
+	position: relative;
 	padding-top: 2.125em;
+    
+    
 }
 
 footer p{
@@ -730,4 +733,17 @@ footer p{
 }
 .button:hover,.button1:hover{
     animation: btnscale 1s 1;
+}
+#navs ul li:hover{
+    background: #a4f087;
+    height: 78px;
+    color: white;
+
+}
+#navs ul li:hover a{
+    color: white;
+}
+#navs ul li:nth-child(1){
+    background: #a4f087;
+    height: 78px;
 }
