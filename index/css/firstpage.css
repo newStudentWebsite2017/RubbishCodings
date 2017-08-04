@@ -77,7 +77,7 @@ main .road{
 	height: 4800px;
 	position: relative;
 	margin-top: 50px;
-	animation: roadmove 1s steps(20) 1;
+	animation: roadmove 1s  1;
 }
 
 
@@ -470,7 +470,7 @@ footer p{
     position: relative;
     background: url(../img/car.png) no-repeat;
     background-position: 0 300px;
-    animation: cardrop 1s  1;
+    animation: cardrop  1s  1;
     
     
 }
@@ -712,4 +712,22 @@ footer p{
 	background: url(../img/bird.png);
 	animation: birdfly 2.5s 1;
 
+}
+.pics{
+    transition: 1.2s;
+}
+.pics:hover{
+    transform: rotate(360deg);
+}
+@keyframes btnscale{
+    0%{transform: scale(1.2,1.2);}
+    25%{transform: scale(1,1);}
+    50%{transform: scale(1.2,1.2);}
+    75%{transform: scale(1.0,1.0);}
+}
+.button,.button1{
+    cursor: pointer;
+}
+.button:hover,.button1:hover{
+    animation: btnscale 1s 1;
 }
